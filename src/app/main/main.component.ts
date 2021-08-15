@@ -18,8 +18,7 @@ export class MainComponent {
 
   generate(n: number) {
     this.fibonacciService.getFibonacci(n)
-    .subscribe((res: any[])=>{
-      console.log('RESPONSE', res);
+    .subscribe((res: any[]) => {
       this.sendedNumber = n;
       this.results = res;
     });

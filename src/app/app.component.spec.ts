@@ -2,10 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms';
-import { FibonacciService } from './main/services/fibonacci.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
