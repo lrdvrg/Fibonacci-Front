@@ -8,6 +8,7 @@ import { FibonacciService } from './services/fibonacci.service';
 })
 export class MainComponent implements OnInit {
   number: number;
+  sendedNumber: number;
   canSubmit = false;
   results: any[];
 
@@ -22,7 +23,7 @@ export class MainComponent implements OnInit {
     this.fibonacciService.getFibonacci(n)
     .subscribe((res: any[])=>{
       console.log('RESPONSE', res);
-
+      this.sendedNumber = n;
       this.results = res;
     });
   }
