@@ -9,7 +9,7 @@ Se debe ejecutar `npm install` para instalar los modulos npm necesarios para pod
 ## Para correr el proyecto
 
 Ejecutar `ng serve` para un servidor de desarrollo. Luego navegar a `http://localhost:4200/`. 
->**Nota: El puerto puede ser cambiado utilizando la opción --port=(puerto que queramos utilizar)**
+>**Nota: El puerto puede ser cambiado utilizando la opción --port**
 
 >**Por ejemplo: ng serve --port=4400**
 ## Para ejecutar las pruebas 
