@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FibonacciService } from './services/fibonacci.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { FibonacciService } from './services/fibonacci.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
   number: number;
   sendedNumber: number;
   canSubmit = false;
@@ -15,9 +15,6 @@ export class MainComponent implements OnInit {
   constructor(
     private fibonacciService: FibonacciService
   ) { }
-
-  ngOnInit() {
-  }
 
   generate(n: number) {
     this.fibonacciService.getFibonacci(n)
