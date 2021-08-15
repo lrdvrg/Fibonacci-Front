@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FibonacciService } from './services/fibonacci.service';
 
 @Component({
   selector: 'app-main',
@@ -8,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
   number: number;
   canSubmit = false;
-  
-  constructor() { }
+  results: any[];
+
+  constructor(
+    private fibonacciService: FibonacciService
+  ) { }
 
   ngOnInit() {
+  }
+
+  generate(n: number) {
+    this.fibonacciService.getFibonacci(n)
+    .subscribe((res: any[])=>{
+      console.log('RESPONSE', res);
+
+      this.results = res;
+    });
   }
 
 }
